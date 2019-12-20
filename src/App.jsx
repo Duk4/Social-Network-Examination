@@ -3,6 +3,7 @@ import users from './data.json';
 
 class App extends React.Component {
   render() {
+    console.log(users);
     return (
       <div className="App" >
         Fuck code tests!
