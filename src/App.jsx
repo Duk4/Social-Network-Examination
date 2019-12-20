@@ -1,22 +1,22 @@
 import React from 'react';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import GroupList from './components/GroupList';
-import users from './data.json';
-import './styles/style.scss';
+import UserProfile from './components/UserProfile';
 
 class App extends React.Component {
   render() {
     return (
-      <div className="App" >
-        <section className="header">
-          <h1>Social Network</h1>
-        </section>
-        <section className="group">
-          <h3>My Group</h3>
-          <section className="group-list">
-            <GroupList users={users} />
+      <BrowserRouter>
+        <div className="App" >
+          <section className="header">
+            <h1>Social Network</h1>
           </section>
-        </section>
-      </div>
+          <Switch>
+            <Route exact path="/" component={GroupList} />
+            <Route exact path="/users/:id" component={UserProfile} />
+          </Switch>
+        </div>
+      </BrowserRouter>
     )
   }
 }
