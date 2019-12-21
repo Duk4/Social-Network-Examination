@@ -1,20 +1,12 @@
 import React from 'react';
-import male from "../images/male.png";
-import female from "../images/female.png";
+import getName from "./functions/getName";
+import getGender from "./functions/getGender";
+import getAge from "./functions/getAge";
 
 const ListUser = ({ user }) => {
-    let name, avatar, age;
-
-    if (user.firstName && user.surname) {
-        name = user.firstName + ' ' + user.surname;
-    } else if (!user.firstName) {
-        name = user.surname;
-    } else if (!user.surname) {
-        name = user.firstName;
-    };
-
-    (user.gender === 'male') ? (avatar = male) : (avatar = female);
-    (user.age) ? (age = user.age + ' years old') : (age = 'age unknown');
+    const name = getName(user.firstName, user.surname);
+    const avatar = getGender(user.gender);
+    const age = getAge(user.age);
 
     return (
         <div className="list-user">

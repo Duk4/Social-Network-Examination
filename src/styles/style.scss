@@ -10,13 +10,18 @@
 
 .header {
     background-color: #6c31da;
-    color: #fff;
 }
 
 h1 {
     font-size: 3rem;
     padding: 1rem;
     font-weight: bold;
+    width: fit-content;
+    margin: 0 auto;
+    a {
+        color: #fff;
+        text-decoration: none;
+    }
 }
 
 h3 {
@@ -24,8 +29,9 @@ h3 {
     padding: 3rem;
 }
 
-img {
-    height: 4rem;
+h4 {
+    text-align: left;
+    font-size: 1.2rem;
 }
 
 .list {
@@ -50,4 +56,62 @@ img {
         cursor: pointer;
         transform: scale(1.03);
     }
+    img {
+        height: 4rem;
+    }
+}
+
+.user {
+    margin-top: 5rem;
+}
+
+.user-profile {
+    display: flex;
+    width: 30%;
+    margin: 0 auto;
+    img {
+        height: 8rem;
+        flex-grow: 1;
+        flex-basis: 0;
+    }
+}
+
+.user-info {
+    flex-basis: 0;
+    flex-grow: 4;
+    p {
+        font-size: 2rem;
+        text-align: right;
+        font-weight: bold;
+    }
+}
+
+.user-net {
+    width: 50%;
+    margin: 3rem auto;
+}
+
+.network {
+    background-color: #af91e5;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    div {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    a {
+        text-decoration: none;
+        margin: 1rem;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+.person {
+    background-color: #fff;
+    color: rgb(68, 68, 68);
+    padding: 0.3rem;
+    border-radius: 0.3rem;
 }
