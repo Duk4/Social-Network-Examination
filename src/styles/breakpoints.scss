@@ -1,0 +1,45 @@
+@media  (max-width: 1350px) {
+    .user-profile {
+        width: 50%;
+    }
+
+    .user-net {
+        width: 70%;
+    }
+}
+
+@media  (max-width: 800px) {
+    .user-profile {
+        width: 70%;
+    }
+
+    .user-net {
+        width: 90%;
+    }
+}
+
+@media  (max-width: 560px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .user {
+        margin-top: 3rem;
+    }
+
+    .user-profile {
+        flex-direction: column;
+        img {
+            height: 4rem;
+            width: 4rem;
+            margin: 0 auto 0.5rem auto;
+        }
+    }
+    
+    .user-info {
+        p {
+            font-size: 1.5rem;
+            text-align: center;
+        }
+    }
+}
